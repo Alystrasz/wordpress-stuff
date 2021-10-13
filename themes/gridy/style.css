@@ -1,0 +1,147 @@
+/*
+Theme Name: gridy
+Theme URI: https://wordpress.org/themes/twentytwenty/
+Author: Remy Raes
+Author URI: https://remyraes.com/
+Description: todo
+Tags: blog, one-column
+Version: 0.1
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gridy
+*/
+
+html, body {
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.content {
+    color: #e3e3e3;
+}
+
+.content a {
+    color: inherit;
+    font-weight: 900;
+}
+
+.content a:hover {
+    color: var(--accent-color-2);
+}
+
+.main-wrapper {
+    opacity: 0;
+    transform: translate(100px, 0px);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.articles-container {
+    overflow: hidden;
+}
+
+.presentation {
+    max-width: 453px;
+    margin: 0 2vw;
+}
+.presentation p {
+    line-height: 1.5rem;
+}
+
+.presentation img {
+    padding: 0 2rem 2rem 2rem;
+}
+
+.category-content {
+    padding: 2.5rem !important;
+    overflow: hidden;
+}
+
+/* reduce h <= 860px*/
+@media (max-height: 860px) and (min-width: 900px) {
+    .category-content {
+        padding: 2.5vw !important;
+    }
+
+    .category-content article {
+        margin-bottom: 100%;
+    }
+
+    .category-content h1 {
+        font-size: 1.2rem !important;
+    }
+
+    .category-content h2 {
+        margin-bottom: 0 !important;
+        font-size: 1rem !important;
+    }
+
+    .category-content p {
+        font-size: 0.85rem !important;
+        line-height: 1.2rem !important;
+    }
+
+    .featured-article p {
+        max-height: 3.6rem !important;
+    }
+
+    .articles-texts p {
+        max-height: 6rem !important;
+    }
+}
+
+/* category name */
+.category-content h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* article name */
+.category-content h1 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.category-content p {
+    display: block;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 10.5em;
+    line-height: 1.5em;
+}
+
+.category-content a {
+    color: white;
+    text-decoration: inherit;
+}
+
+.category-content-link {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: 0.7rem;
+    padding: 0.5rem 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+    text-decoration: none;
+}
+
+.category-content-link:hover {
+    background: rgba(255, 255, 255, 0.6);
+}

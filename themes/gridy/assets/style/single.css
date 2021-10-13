@@ -1,0 +1,57 @@
+.single-article-title-container {
+    height: 15rem;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.single-article-title {
+    position: absolute;
+    color: white;
+    line-height: 1.5;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    padding: 0 4rem;
+}
+
+.single-article-title h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin: 0;
+}
+
+.single-article-title h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-style: italic;
+    margin: 0;
+}
+
+.single-article-wrapper-content {
+    margin: 3rem;
+}
+
+@media (max-width: 600px) {
+    .single-article-wrapper-content {
+        margin: 2rem 1.5rem;
+    }
+}
+
+.single-article-wrapper-content .article-content h2 {
+    font-size: 2rem !important;
+    margin-top: 2rem;
+    font-style: inherit;
+}
+
+.single-article-wrapper-content .article-content h3 {
+    font-style: italic;
+}
+
+.single-article-wrapper-content .article-content blockquote {
+    border-left: 3px solid white;
+    padding-left: 1rem;
+}

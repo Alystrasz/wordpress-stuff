@@ -1,0 +1,136 @@
+.articles-wrapper {
+    background-color: var(--main-color);
+    height: 100%;
+    overflow-y: auto;
+}
+
+.articles-wrapper-header {
+    height: 15rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+
+.single-article-title-container .articles-wrapper-header {
+    filter: grayscale(1) blur(3px);
+    transform: scale(1.02);
+}
+
+.articles-wrapper-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    padding: 1.5vh 1vw;
+    color: white;
+    background-color: rgba(0,0,0,.2);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+.articles-wrapper-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    font-size: 2.65rem;
+    color: white;
+    background-color: rgba(0,0,0,.2);
+    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 1;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.articles-wrapper-close i:before {
+    transition: 0.3s ease;
+}
+
+.articles-wrapper-close:hover {
+    color: white;
+    background-color: rgba(0,0,0,.4);
+}
+
+.articles-wrapper-close:hover i:before {
+    transform: rotateZ(90deg);
+}
+
+.articles-wrapper-content {
+    height: 72%;
+    margin: 0 2rem;
+    padding-top: 1rem;
+}
+
+.articles-wrapper-content article {
+    position: relative;
+    padding: 2rem 0 2rem 120px;
+    border-bottom: 1px solid var(--accent-color-1);
+}
+
+.article-logo {
+    background-size: cover;
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 2rem;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+@media (max-width: 600px) {
+    .articles-wrapper-content article {
+        padding: 2rem 0;
+    }
+
+    .article-logo {
+        position: relative;
+        float: right;
+        top: 0;
+        margin: 0 0 1rem 1rem;
+    }
+}
+
+.article-content h1 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.article-content h2 {
+    font-size: 1.2rem!important;
+    margin-top: -0.5rem;
+    font-style: italic;
+}
+
+.article-content * {
+    width: 100%;
+    height: auto;
+}
+
+.articles-pagination {
+    padding-top: 2rem;
+}
+
+.articles-navigation {
+    padding-bottom: 2rem;
+    color: white;
+}
+
+.articles-navigation:hover {
+    color: white;
+}
+
+.older {
+    float: right;
+}
+
+.newer {
+    float: left;
+}

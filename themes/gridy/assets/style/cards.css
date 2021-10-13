@@ -1,0 +1,165 @@
+/**
+    Images carousel, appearing on top of the content wrapper.
+    It displays features images from articles of a given category.
+ */
+
+.articles-images-link {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    z-index: 30;
+}
+
+.articles-images-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.articles-images-slider .tns-item {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
+    z-index: 1;
+    transition: all 0.3s;
+    filter: brightness(90%);
+}
+
+.articles-images-slider .tns-item:hover {
+    transform: scale(1.05);
+    filter: brightness(110%);
+}
+
+.articles-images-label {
+    position: absolute;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    left: 2.8vw;
+    bottom: 2.8vw;
+    z-index: 10;
+    font-weight: 900;
+    color: #fff;
+    border-radius: 50px;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: 0.7rem;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    outline: 0;
+    text-decoration: none;
+}
+
+.articles-images-label:before {
+    content: "+";
+    position: absolute;
+    font-size: 30px;
+    transform: translate3d(-28px, -13.5px, 0);
+}
+
+
+/**
+    This text carousel displays previews (first few lines) of a given count of articles
+    belonging to a given category.
+ */
+
+.articles-texts {
+    background-color: var(--main-color);
+    overflow: hidden;
+    height: 100%;
+}
+
+@media (max-width: 400px) and (max-height: 720px) {
+    .articles-texts {
+        height: auto !important;
+    }
+}
+
+.articles-texts .tns-outer, .articles-texts .tns-ovh {
+    height: 100%;
+}
+
+.articles-texts .tns-inner {
+    margin-right: -1px !important;
+}
+
+.articles-texts .tns-nav {
+    position: absolute;
+    right: 3vw;
+    bottom: 1vw;
+    z-index: 5;
+}
+
+.articles-texts .tns-nav button {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    width: 30px;
+    height: 5px;
+    margin-right: 0.5rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.articles-texts .tns-nav-active {
+    background: white !important;
+    height: 10px !important;
+}
+
+
+/**
+    This displays latest article.
+ */
+
+.featured-article {
+    height: 65%;
+    background-color: var(--accent-color-1);
+}
+
+@media (max-width: 576px) and (max-height: 900px) {
+    .featured-article {
+        height: auto !important;
+    }
+}
+
+.featured-article p {
+    max-height: 4.5em !important;
+    line-height: 1.5em !important;
+}
+
+
+/**
+    This display contact information, on the bottom of the page.
+ */
+
+.contact {
+    height: 35%;
+    background-color: var(--accent-color-2);
+}
+
+.contact-list {
+    width: 100%;
+}
+
+:root {
+    --logo-size: 5vh;
+}
+
+.contact-list a {
+    line-height: var(--logo-size);
+}
+
+.contact-list i {
+    color: white;
+    font-size: var(--logo-size);
+    margin: 0 .8rem;
+    transition: all 0.3s;
+}
+
+.contact-list i:hover {
+    color: lightgrey;
+}

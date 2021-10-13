@@ -1,0 +1,9 @@
+:root {
+    --main-color: dodgerblue;
+    --accent-color-1: royalblue;
+    --accent-color-2: cornflowerblue;
+}
+
+.simplebar-scrollbar::before {
+    background-color: white !important;
+}

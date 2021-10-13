@@ -1,0 +1,16 @@
+{
+	"apiVersion": 2,
+	"name": "create-block/papi-carousel",
+	"version": "0.0.1",
+	"title": "Carousel PAPI",
+	"category": "widgets",
+	"icon": "images-alt2",
+	"description": "Affiche les derniers articles publiés sous la forme d'un carousel beaucoup trop stylé.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "papi-carousel",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}
