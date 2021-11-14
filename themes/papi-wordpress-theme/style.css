@@ -1,0 +1,160 @@
+/*
+Theme Name: PAPI Delta de l'Aa
+Text Domain: papi-delta-aa
+Theme URI: https://github.com/Alystrasz/papi-wordpress-theme
+Author: Remy Raes
+Author URI: https://remyraes.com/
+Description: Ceci est le thème Wordpress du PAPI du Delta de l'Aa, reprenant les éléments de son identité graphique : logos, couleurs et polices d'écriture.
+Tags: blog, one-column, corporate
+Version: 0.3
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+.header-bg {
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    user-select: none;
+}
+
+.header-logo-container {
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-logo-container a {
+    height: 100%;
+    width: 100%;
+    display: contents;
+}
+
+.header-logo-container img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.header-logo-container a, .navbar a {
+    user-select: none;
+}
+
+.nav-bar-container {
+    top: -1px;
+    position: sticky;
+    z-index: 1;
+    user-select: none;
+}
+
+footer {
+    padding: 2.5rem 0;
+    color: #727272;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+}
+
+.mobile-menu {
+    display: block;
+}
+
+@media (min-width: 992px) {
+    #navbarHeader {
+    /*.mobile-menu {*/
+        display: none;
+    }
+}
+
+
+:root {
+    --logo-translation: -88px;
+}
+
+.navbar-brand {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(var(--logo-translation));
+    transition: all 0.2s ease-in;
+}
+.navbar-brand-visible {
+    opacity: 1;
+    pointer-events: all;
+    transform: none;
+}
+.navbar-brand img {
+    height: 80px;
+}
+
+#navbar-menu-container {
+    transform: translateX(var(--logo-translation));
+    transition: all 0.2s ease-in;
+}
+
+.navbar-menu-container-no-translation {
+    transform: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.back-to-top-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 60px;
+    display: block;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 2rem;
+    transition: all 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
+    .back-to-top-btn {
+        right: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .back-to-top-btn {
+        right: 20px;
+        bottom: 30px;
+    }
+}
+
+.back-to-top-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.show-back-to-top-btn {
+    opacity: 1;
+    pointer-events: all;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.15s ease-in;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+.article-logo {
+    float: left;
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    margin: 0 15px 0px 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    margin-top: 3px;
+}

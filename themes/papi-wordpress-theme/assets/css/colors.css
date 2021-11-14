@@ -1,0 +1,21 @@
+:root {
+    --primary-color: rgb(0, 65, 94);
+    --secondary-color: rgb(0, 152, 173);
+}
+
+
+.primary {
+    color: var(--primary-color);
+}
+
+.secondary {
+    color: var(--secondary-color);
+}
+
+.primary-bg {
+    background-color: var(--primary-color);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    background-color: var(--secondary-color);
+}
